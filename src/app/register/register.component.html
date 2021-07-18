@@ -1,0 +1,72 @@
+<div class="row pt-5">
+    <div class="col-md-6 mx-auto">
+        <div class="card rounded-0">
+            <div class="card-header">
+                <h3 class="mb-0">Register</h3>
+            </div>
+            <div class="card-body">
+                <form class="form" [formGroup]="registraionForm" (ngSubmit)="onSubmit()">
+                    <div class="form-group">
+                        <label for="userName">UserName: </label>
+                        <input id="userName" type="text" class="form-control" formControlName="userName" [ngClass]="{'is-invalid':registraionForm.controls.userName.touched && registraionForm.controls.userName.invalid}">
+                        <div class="invalid-feedback">
+                            <div>Username is required</div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password: </label>
+                        <input id="password" type="password" class="form-control" formControlName="password" [ngClass]="{'is-invalid':registraionForm.controls.password.touched && registraionForm.controls.password.invalid}">
+                        <div class="invalid-feedback">
+                            <div>Password is required(Minimum 8 characters)</div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="empid">EmployeeID: </label>
+                        <input id="empid" type="text" class="form-control" formControlName="empid" [ngClass]="{'is-invalid':registraionForm.controls.empid.touched && registraionForm.controls.empid.invalid}">
+                        <div class="invalid-feedback">
+                            <div>EmployeeID is required</div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="name">Name: </label>
+                        <input id="name" type="text" class="form-control" formControlName="name" [ngClass]="{'is-invalid':registraionForm.controls.name.touched && registraionForm.controls.name.invalid}">
+                        <div class="invalid-feedback">
+                            <div>Name is required</div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email: </label>
+                        <input id="email" type="email" class="form-control" formControlName="email" [ngClass]="{'is-invalid':registraionForm.controls.email.touched && registraionForm.controls.email.invalid}">
+                        <div class="invalid-feedback">
+                            <div>Email is required or enter a valid Email Id</div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone: </label>
+                        <input id="phone" type="email" class="form-control" formControlName="phone" [ngClass]="{'is-invalid':registraionForm.controls.phone.touched && registraionForm.controls.phone.invalid}">
+                        <div class="invalid-feedback">
+                            <div>Phone is required or enter a valid phone number</div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="designation">Designation: </label>
+                        <input id="designation" type="email" class="form-control" formControlName="designation" [ngClass]="{'is-invalid':registraionForm.controls.designation.touched && registraionForm.controls.designation.invalid}">
+                        <div class="invalid-feedback">
+                            <div>Designation is required</div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="address">Address: </label>
+                        <input id="address" type="email" class="form-control" formControlName="address" [ngClass]="{'is-invalid':registraionForm.controls.address.touched && registraionForm.controls.address.invalid}">
+                        <div class="invalid-feedback">
+                            <div>Address is required</div>
+                        </div>
+                    </div>
+                    <br>
+                    <a href="login" class="">Aleardy have an account.</a>
+                    <button type="submit" [disabled]="!registraionForm.valid" class="btn btn-info button-class">Register</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
